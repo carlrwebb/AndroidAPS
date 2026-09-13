@@ -161,8 +161,7 @@ jobs:
 
       - name: Switch to selected tag
         run: |
-          git checkout refs/tags/${{ github.event.inputs.tagName }}
-          echo "Checked out tag ${{ github.event.inputs.tagName }}"
+          echo "Skipping tag checkout - building from master with local modifications"
 
       - name: Set BUILD_VARIANT
         run: |
